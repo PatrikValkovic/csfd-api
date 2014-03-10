@@ -1,0 +1,26 @@
+{
+  "name": "csfd",
+  "version": "1.0.0",
+  "description": "csfd api",
+  "keywords": [],
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "author": {
+    "name": "Daniel Husár",
+    "email": "dano.husar@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielhusar/csfd"
+  },
+  "dependencies": {
+    "request": "*",
+    "cheerio": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "readmeFilename": "Readme.md"
+}
