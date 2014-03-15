@@ -4,7 +4,7 @@
   "description": "csfd api",
   "keywords": [],
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha -R spec --timeout 5000"
   },
   "author": {
     "name": "Daniel Husár",
@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "request": "*",
-    "cheerio": "*"
+    "cheerio": "*",
+    "q": "*"
   },
   "devDependencies": {
     "mocha": "*",
