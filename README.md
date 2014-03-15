@@ -1,4 +1,4 @@
-# CSFD[![Build Status](https://secure.travis-ci.org/danielhusar/csfd.png?branch=master)](http://travis-ci.org/danielhusar/csfd)
+# CSFD [![Build Status](https://secure.travis-ci.org/danielhusar/csfd.png?branch=master)](http://travis-ci.org/danielhusar/csfd)
 
 CSFD json api
 
