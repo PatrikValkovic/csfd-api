@@ -1,1 +1,2 @@
-module.exports = require('./lib/csfd.js').lib;
+'use strict';
+module.exports = require('./lib/csfd.js').csfd;

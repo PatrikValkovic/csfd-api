@@ -1,10 +1,11 @@
 'use strict';
-var assert = require('assert');
-var should = require('should');
+var assert = require('assert'),
+  should = require('should'),
+  csfd = require('../index.js');
 
 describe('Globals: ', function(){
-  it('Object should exist', function () {
+  it('CSFD object should exist', function () {
     assert(true);
-    this.should.be.exactly(this);
+    csfd.should.be.type('object');
   });
 });
