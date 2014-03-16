@@ -1,6 +1,5 @@
 'use strict';
-var assert = require('assert'),
-  should = require('should'),
+var should = require('should'),
   csfd = require('../index.js'),
   fs = require('fs');
 
