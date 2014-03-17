@@ -23,6 +23,16 @@ csfd.searchMovie('matrix').then(function(data){
 
 ```
 
+### Search Actor
+
+```
+var csfd = require('csfd');
+csfd.searchActor('Brad Pitt').then(function(data){
+	console.log(data);
+});
+
+```
+
 ## License
 
 MIT
