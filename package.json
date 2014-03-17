@@ -1,8 +1,11 @@
 {
   "name": "csfd",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "csfd api",
-  "keywords": [],
+  "keywords": [
+    "csfd",
+    "movies"
+  ],
   "scripts": {
     "test": "mocha -R spec --timeout 5000"
   },
