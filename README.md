@@ -1,4 +1,4 @@
-# CSFD [![Build Status](https://secure.travis-ci.org/danielhusar/csfd.png?branch=master)](http://travis-ci.org/danielhusar/csfd)
+# CSFD [![Build Status](https://secure.travis-ci.org/danielhusar/csfd.svg?branch=master)](http://travis-ci.org/danielhusar/csfd)
 
 CSFD json api
 
@@ -20,7 +20,6 @@ var csfd = require('csfd');
 csfd.searchMovie('matrix').then(function(data){
 	console.log(data);
 });
-
 ```
 
 ### Search Actor
@@ -30,7 +29,6 @@ var csfd = require('csfd');
 csfd.searchActor('Brad Pitt').then(function(data){
 	console.log(data);
 });
-
 ```
 
 ## License
