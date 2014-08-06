@@ -1,6 +1,6 @@
 {
   "name": "csfd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "csfd api",
   "keywords": [
     "csfd",
@@ -18,13 +18,13 @@
     "url": "https://github.com/danielhusar/csfd"
   },
   "dependencies": {
-    "request": "*",
-    "cheerio": "*",
-    "q": "*"
+    "request": "^2.39.0",
+    "cheerio": "^0.17.0",
+    "q": "^1.0.1"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*"
+    "mocha": "^1.21.3",
+    "should": "^4.0.4"
   },
   "readmeFilename": "Readme.md"
 }
