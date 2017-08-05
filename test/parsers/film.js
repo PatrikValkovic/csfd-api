@@ -193,6 +193,79 @@ describe('Parsing of sites about film', function () {
   it('Should parse Pulp Finction film', async function () {
     const content = fs.readFileSync(`${__dirname}/sites/PulpFiction.html`)
     const parsed = await filmParser(content)
+    assert.deepStrictEqual(parsed, {
+        id: 8852,
+        title: 'Pulp Fiction: Historky z podsvětí ',
+        titles: [
+          {
+            language: 'USA',
+            title: 'Pulp Fiction',
+          },
+          {
+            language: 'Slovensko',
+            title: 'Pulp Fiction: Historky z podsvetia',
+          },
+        ],
+        genre: [
+          'Drama',
+          'Krimi',
+        ],
+        shotPlaces: [
+          'USA',
+        ],
+        year: 1994,
+        length: 154,
+        score: 91,
+        directors: [
+          {
+            id: 2120,
+            name: 'Quentin Tarantino',
+          },
+        ],
+        screenplay: [
+          {id: 2120, name: 'Quentin Tarantino'},
+          {id: 3965, name: 'Roger Avary'},
+        ],
+        music: [],
+        actors: [
+          {id: 115, name: 'John Travolta'},
+          {id: 425, name: 'Samuel L. Jackson'},
+          {id: 477, name: 'Tim Roth'},
+          {id: 180, name: 'Uma Thurman'},
+          {id: 149, name: 'Christopher Walken'},
+          {id: 3, name: 'Willis'},
+          {id: 280, name: 'Harvey Keitel'},
+          {id: 878, name: 'Amanda Plummer'},
+          {id: 517, name: 'Rosanna Arquette'},
+          {id: 911, name: 'Eric Stoltz'},
+          {id: 896, name: 'Ving Rhames'},
+          {id: 7207, name: 'Maria de Medeiros'},
+          {id: 20043, name: 'Peter Greene'},
+          {id: 36913, name: 'Duane Whitaker'},
+          {id: 20775, name: 'Paul Calderon'},
+          {id: 1973, name: 'Frank Whaley'},
+          {id: 3376, name: 'Burr Steers'},
+          {id: 24644, name: 'Phil LaMarr'},
+          {id: 36977, name: 'Bronagh Gallagher'},
+          {id: 2120, name: 'Quentin Tarantino'},
+          {id: 95, name: 'Steve Buscemi'},
+          {id: 5178, name: 'Joseph Pilato'},
+          {id: 27350, name: 'Angela Jones'},
+          {id: 9618, name: 'Julia Sweeney'},
+          {id: 86751, name: 'Laura Lovelace'},
+          {id: 6041, name: 'Alexis Arquette'},
+          {id: 47648, name: 'Lawrence Bender'},
+          {id: 54587, name: 'Kathy Griffin'},
+          {id: 63952, name: 'Michael Gilden'},
+          {id: 34587, name: 'Dick Miller'},
+          {id: 127837, name: 'Don Blakely'},
+          {id: 218510, name: 'Stephen Hibbert'},
+          {id: 235105, name: 'Karen Maruyama'},
+          {id: 277860, name: 'Emil Sitka'},
+        ],
+        content: 'Nejkultovnější z kultovních filmů 90. let je autorskou Biblí Quentina Tarantina, který v tomto opusu definoval základní prvky své režisérské poetiky a vytvořil dílo rozněcující náročné kritiky na festivalu v Cannes, levicové a pravicové intelektuály i zedníky dopřávající si po těžké šichtě trochu oddychu. Pulp Fiction je multižánrovým opusem, který přetéká fetišistickými detaily a popkulturními odkazy a zároveň dokonale funguje jako svrchovaně napínavý film rozvržený do inovativní příběhové struktury. Chcete vidět homosexuální znásilnění sbližující dva nepřátele na život a na smrt?(AČFK)',
+      },
+    )
   })
 
 })
