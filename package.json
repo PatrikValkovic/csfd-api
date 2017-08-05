@@ -13,6 +13,12 @@
     "name": "Daniel Husár",
     "email": "dano.husar@gmail.com"
   },
+  "contributors": [
+    {
+      "name": "Patrik Valkovic",
+      "email": "patrik.valkovic@hotmail.cz"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/danielhusar/csfd"
