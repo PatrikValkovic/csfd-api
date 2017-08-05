@@ -1,12 +1,12 @@
 language: node_js
 node_js:
-  - '0.10'
+  - 'v8.0.0'
 
 script:
 - npm run cover
 
 after_script:
-- npm run coveralls   
+- npm run coveralls
 
 notifications:
   email: false
