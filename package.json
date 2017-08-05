@@ -9,7 +9,9 @@
   ],
   "scripts": {
     "test": "node_modules/.bin/_mocha -R spec --timeout 5000 --recursive test",
-    "cover": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec --timeout 5000 --recursive test; node_modules/.bin/istanbul report text",
+    "cover": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec --timeout 5000 --recursive test",
+    "report": "node_modules/.bin/istanbul report text",
+    "cover-report": "npm run cover; npm run report",
     "coveralls": "node_modules/.bin/coveralls < coverage/lcov.info && rm -rf ./coverage"
   },
   "author": {

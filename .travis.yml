@@ -6,6 +6,7 @@ script:
 - npm run cover
 
 after_script:
+- npm run report
 - npm run coveralls
 
 notifications:
