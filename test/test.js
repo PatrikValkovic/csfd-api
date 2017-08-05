@@ -39,7 +39,7 @@ describe('Search Movie fake data', function(){
 });
 
 describe('Search Movie real data', function(){
-  it('We should get proper movie', function (done) {
+  it.skip('We should get proper movie', function (done) {
     csfd.searchMovie('matrix').then(function(data){
       data[0].title.should.be.equal('Matrix');
       data[0].url.should.be.equal('http://www.csfd.cz/film/9499-matrix/');
@@ -82,7 +82,7 @@ describe('Search Actor fake data', function(){
 });
 
 describe('Search Actor real data', function(){
-  it('We should get proper actor', function (done) {
+  it.skip('We should get proper actor', function (done) {
     csfd.searchActor('Brad Pitt').then(function(data){
       data[0].title.should.be.equal('Brad Pitt');
       data[0].url.should.be.equal('http://www.csfd.cz/tvurce/5-brad-pitt/');
