@@ -1,4 +1,5 @@
-# CSFD [![Build Status](https://secure.travis-ci.org/danielhusar/csfd.svg?branch=master)](http://travis-ci.org/danielhusar/csfd)
+# CSFD 
+[![Build Status](https://travis-ci.org/PatrikValkovic/csfd-api.svg?branch=dev)](https://travis-ci.org/PatrikValkovic/csfd-api) [![Coverage Status](https://coveralls.io/repos/github/PatrikValkovic/csfd-api/badge.svg?branch=dev)](https://coveralls.io/github/PatrikValkovic/csfd-api?branch=dev)
 
 CSFD json api
 
