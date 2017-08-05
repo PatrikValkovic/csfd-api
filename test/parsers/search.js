@@ -244,6 +244,52 @@ describe('Parsing of search sites', function () {
   it('Should parse Kit Harington from search page', async function () {
     const content = fs.readFileSync(`${__dirname}/sites/KitHaringtonSearch.html`)
     const parsed = await searchParser(content)
+    assert.deepStrictEqual(parsed, {
+      films: [],
+      people: [
+        {id: 65871, name: 'Kit Harington'},
+        {id: 171384, name: 'Jacky Cai'},
+        {id: 171463, name: 'L.M. Kit Carson'},
+        {id: 269800, name: 'Kit Cowey'},
+        {id: 264340, name: 'Kit Denton'},
+        {id: 94883, name: 'Kit Eivor'},
+        {id: 177585, name: 'Man-kit Fan'},
+        {id: 327605, name: 'Oi-Kit Fan'},
+        {id: 234979, name: 'Kit Fraser'},
+        {id: 188128, name: 'Kit Guard'},
+        {id: 93407, name: 'Kit Hood'},
+        {id: 200566, name: 'Chun-Kit Chan'},
+        {id: 105827, name: 'Clement Cheng'},
+        {id: 200517, name: 'Kit Lai'},
+        {id: 207052, name: 'Kwok-kit Lam'},
+        {id: 176926, name: 'Kit Lambert'},
+        {id: 250991, name: 'Kit Laughlin'},
+        {id: 72489, name: 'Ying Kit Lee'},
+        {id: 96846, name: 'Guangjie Li'},
+        {id: 180112, name: 'Chun Kit Mak'},
+        {id: 106034, name: 'Kit-Man Mak'},
+        {id: 18395, name: 'Tai Kit Mak'},
+        {id: 133068, name: 'Kit Mallet'},
+        {id: 101425, name: 'Kit McDee'},
+        {id: 139664, name: 'Kit Monkman'},
+        {id: 206781, name: 'Kit Keung Ng'},
+        {id: 191457, name: 'Kit Pang'},
+        {id: 133764, name: 'Kit Paquin'},
+        {id: 270832, name: 'Kit Peterson'},
+        {id: 4187, name: 'Man Kit Poon'},
+        {id: 35714, name: 'Kit Ryan'},
+        {id: 315114, name: 'Kit \'Pistol\' Scarbo'},
+        {id: 230614, name: 'Kit Shea'},
+        {id: 196323, name: 'Kit-Wing Si'},
+        {id: 172894, name: 'Cindy Tang'},
+        {id: 105619, name: 'Alex Tsui'},
+        {id: 84321, name: 'Marco Wan'},
+        {id: 239848, name: 'Kit Williamson'},
+        {id: 43652, name: 'Andy On'},
+        {id: 105635, name: 'Jevons Au Man-Kit'},
+        {id: 204035, name: 'Jeff Cheung'},
+      ],
+    })
   })
 
 })
