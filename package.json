@@ -7,7 +7,7 @@
     "movies"
   ],
   "scripts": {
-    "test": "mocha -R spec --timeout 5000"
+    "test": "node_modules/.bin/mocha -R spec --timeout 5000"
   },
   "author": {
     "name": "Daniel Husár",
