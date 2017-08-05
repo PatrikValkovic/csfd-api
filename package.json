@@ -7,8 +7,9 @@
     "movies"
   ],
   "scripts": {
-    "test": "node_modules/.bin/mocha -R spec --timeout 5000",
-    "cover": "node_modules/.bin/istanbul cover npm run test"
+    "test": "node_modules/.bin/_mocha -R spec --timeout 5000",
+    "cover": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec --timeout 5000",
+    "coveralls": "node_modules/.bin.coveralls"
   },
   "author": {
     "name": "Daniel Husár",
@@ -30,8 +31,10 @@
     "q": "^1.0.1"
   },
   "devDependencies": {
+    "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
     "mocha": "^1.21.3",
+    "mocha-lcov-reporter": "^1.3.0",
     "should": "^4.0.4"
   },
   "readmeFilename": "Readme.md"
