@@ -99,7 +99,95 @@ describe('Parsing of sites about film', function () {
   it('Should parse The Lord of the Rings film', async function () {
     const content = fs.readFileSync(`${__dirname}/sites/TheLordOfTheRings.html`)
     const parsed = await filmParser(content)
-
+    assert.deepStrictEqual(parsed, {
+      id: 4712,
+      title: 'Pán prstenů: Návrat krále',
+      titles: [
+        {
+          language: 'USA',
+          title: 'The Lord of the Rings: The Return of the King',
+        },
+        {
+          language: 'Slovensko',
+          title: 'Pán prsteňov: Návrat kráľa',
+        },
+      ],
+      genre: [
+        'Fantasy',
+        'Dobrodružný',
+        'Akční',
+      ],
+      shotPlaces: [
+        'USA',
+        'Nový Zéland',
+      ],
+      year: 2003,
+      length: 201,
+      score: 90,
+      directors: [
+        {
+          id: 11,
+          name: 'Peter Jackson',
+        },
+      ],
+      screenplay: [
+        {id: 72205, name: 'Fran Walsh'},
+        {id: 72206, name: 'Philippa Boyens'},
+        {id: 11, name: 'Peter Jackson'},
+      ],
+      music: [
+        {
+          id: 62277,
+          name: 'Howard Shore',
+        },
+      ],
+      actors: [
+        {id: 165, name: 'Elijah Wood'},
+        {id: 69116, name: 'Noel Appleby'},
+        {id: 168, name: 'Billy Boyd'},
+        {id: 169, name: 'Dominic Monaghan'},
+        {id: 167, name: 'Sean Astin'},
+        {id: 74, name: 'Ian McKellen'},
+        {id: 166, name: 'Viggo Mortensen'},
+        {id: 60, name: 'Orlando Bloom'},
+        {id: 97, name: 'Liv Tyler'},
+        {id: 81, name: 'Christopher Lee'},
+        {id: 62, name: 'Cate Blanchett'},
+        {id: 76, name: 'John Rhys-Davies'},
+        {id: 4354, name: 'Bernard Hill'},
+        {id: 124, name: 'Brad Dourif'},
+        {id: 4352, name: 'Miranda Otto'},
+        {id: 11781, name: 'Marton Csokas'},
+        {id: 102, name: 'Hugo Weaving'},
+        {id: 4353, name: 'Karl Urban'},
+        {id: 170, name: 'Sean Bean'},
+        {id: 4355, name: 'David Wenham'},
+        {id: 13424, name: 'John Noble'},
+        {id: 13883, name: 'Andy Serkis'},
+        {id: 6326, name: 'Bruce Spence'},
+        {id: 11, name: 'Peter Jackson'},
+        {id: 64124, name: 'Lawrence Makoare'},
+        {id: 33786, name: 'Billy Jackson'},
+        {id: 47731, name: 'Bret McKenzie'},
+        {id: 50740, name: 'Sala Baker'},
+        {id: 52031, name: 'Joel Tobeck'},
+        {id: 52339, name: 'Alan Howard'},
+        {id: 56931, name: 'Peter Tait'},
+        {id: 59415, name: 'John Bach'},
+        {id: 171, name: 'Ian Holm'},
+        {id: 66484, name: 'Bruce Hopkins'},
+        {id: 20986, name: 'Pete Smith'},
+        {id: 68605, name: 'Jed Brophy'},
+        {id: 70350, name: 'Bruce Phillips'},
+        {id: 74156, name: 'Shane Rangi'},
+        {id: 3829, name: 'Harry Sinclair'},
+        {id: 197864, name: 'Ali Astin'},
+        {id: 208294, name: 'Ian Hughes'},
+        {id: 67568, name: 'Andrew Lesnie'},
+        {id: 33794, name: 'Richard Taylor'},
+      ],
+      content: 'Nadchází čas rozhodující bitvy o přežití Středozemě. Putování jednotlivých členů Společenstva prstenu se dostává do poslední a rozhodující fáze. Čaroděj Gandalf, elf Legolas a trpaslík Gimli spěchají s dědicem trůnu Aragornem na pomoc zemi Gondor, která odolává ohromnému Sauronovu vojsku. Hobiti Frodo a Sam se v doprovodu Gluma snaží dostat hluboko do země Mordor, kde musí v ohních Hory osudu zničit magický Prsten moci. Jedině tak bude síla mocného pána temnot Saurona zlomena. Podaří se jim naplnit poslání Společenstva a zachránit Středozem? A za jakou cenu?(oficiální text distributora)',
+    })
   })
 
   it('Should parse Pulp Finction film', async function () {
