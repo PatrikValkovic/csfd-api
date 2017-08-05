@@ -33,3 +33,5 @@ results
 npm-debug.log
 node_modules
 cache/*
+
+.idea
