@@ -8,8 +8,8 @@
     "api"
   ],
   "scripts": {
-    "test": "node_modules/.bin/_mocha -R spec --timeout 5000",
-    "cover": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec --timeout 5000",
+    "test": "node_modules/.bin/_mocha -R spec --timeout 5000 --recursive test",
+    "cover": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec --timeout 5000 --recursive test",
     "coveralls": "node_modules/.bin/coveralls < coverage/lcov.info && rm -rf ./coverage"
   },
   "author": {
