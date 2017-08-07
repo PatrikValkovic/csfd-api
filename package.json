@@ -29,9 +29,9 @@
     "url": "https://github.com/PatrikValkovic/csfd-api"
   },
   "dependencies": {
-    "request": "^2.39.0",
     "cheerio": "^0.17.0",
-    "q": "^1.0.1"
+    "q": "^1.0.1",
+    "request": "^2.39.0"
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
