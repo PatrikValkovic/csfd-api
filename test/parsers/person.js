@@ -27,7 +27,7 @@ describe('Parsing of sites about person', function () {
       ],
     }
 
-    assert.deepStrictEqual(parsed, expect )
+    assert.deepStrictEqual(parsed, expect)
   })
 
   it('Should parse info about Johnny Depp', function () {
@@ -181,7 +181,37 @@ describe('Parsing of sites about person', function () {
         {id: 301498, name: 'Love Birds in Bondage'},
       ],
     }
-    
+
+    assert.deepStrictEqual(parsed, expect)
+  })
+
+  it('Should return no films, because person is not actor', function () {
+    const content = fs.readFileSync(`${__dirname}/sites/HansZimmerWithoutActing.html`)
+    const parsed = personParser(content)
+    const expect = {
+      id: 62265,
+      name: 'Hans Zimmer',
+      birthday: new Date(1957, 9, 12),
+      residence: 'Frankfurt nad Mohanem, Hessen, Západní Německo',
+      bibliography: 'Hans Florian Zimmer se narodil 12. září roku 1957 v německém Frankfurtu nad Mohanem. Během dospívání se přesunul do Londýna, kde navštěvoval školu Hurtwood House. Dle vlastních slov se mu hudba stala nejbližším přítelem po brzké smrti jeho otce. Začínal s klávesami a syntezátory, s hudbou pomáhal například synthpopové skupině The Buggles a o něco později italským new wave hudebníkům Krisma.Roku 1980 se v Londýně stal partnerem filmového skladatele Stanleyho Myerse, který dělal hudbu mj. pro Lovce Jelenů (1978). Během své spolupráce začali míchat klasický orchestrální projev s prvky elektroniky. V osmdesátých letech se podíleli na hudbě k několika filmům. Zlomovým se pro Zimmera stal rok 1988. Barry Levinson sháněl hudebního skladatele pro svůj film RAIN MAN a jeho žena mu doporučila právě Zimmera, od nějž se jí líbil soundtrack k dramatu A WORLD APART. Z Rain Mana se stal oscarový hit a nominaci získal i v hudební kategorii.Roku 1989 komponoval hudbu k dalšímu oscarovému vítězi, ŘIDIČI SLEČNY DAISY. V témže roce ho objevil slavný Ridley Scott, pro nějž Zimmer dělal hudbu ke snímku BLACK RAIN a o dva roky později i k THELMĚ A LOUISE. Roku 1992 odjel do Afriky, aby čerpal inspiraci ve zdejší hudbě pro film THE POWER OF ONE, nastudovat potřeboval především typické africké chorály a bubny. Na základě tohoto soundtracku si ho studio Disney vybralo pro animovaný hit LVÍ KRÁL (1994), který se stal mezníkem v Zimmerově kariéře. Kromě zlatého glóbu a ceny grammy si odnesl i Oscara. Ceny získával i muzikál na totéž téma, který těžil právě ze Zimmerova soundtracku. Do konce tisíciletí si oscarovou nominaci v sekci hudba vysloužily ještě filmy THE PREACHER\'S WIFE (1996), AS GOOD AS IT GETS (1997) a THIN RED LINE (1998), vše samozřejmě pod Zimmerovo taktovkou, jednu další nominaci sdílel se Stephenem Schwartzem za animovaného PRINCE EGYPTSKÉHO (1998). Velice populární je jeho na Oscara opět nominovaná hudba ke GLADIÁTOROVI (2000), která se stala jedním z nejlépe prodávaných soundtracků vůbec. Hans se zde opět spojil s Ridleym Scottem, s nímž pak spolupracoval ještě v BLACK HAWK DOWN (2001). Od té doby skládal hudbu k mnoha úspěšným filmům, mezi něž patří mj. Nolanův TEMNÝ RYTÍŘ, druhý a třetí díl PIRÁTŮ Z KARIBIKU nebo POSLEDNÍ SAMURAJ. Věrný stále zůstává i animovaným filmům.Charakteristickým by se na jeho práci dalo označit používání hudebních prvků z kultur, v nichž se odehrává příběh filmu. Velmi zručně také míchá syntezátory s orchestrální hudbou.Hans Zimmer žije v Los Angeles se svou ženou Suzanne a má čtyři děti, z toho jedno z předchozího manželství.',
+      films: [],
+    }
+
+    assert.deepStrictEqual(parsed, expect)
+  })
+
+  it('Should return no films, because person not play in any film', function () {
+    const content = fs.readFileSync(`${__dirname}/sites/HansZimmerWithoutFilms.html`)
+    const parsed = personParser(content)
+    const expect = {
+      id: 62265,
+      name: 'Hans Zimmer',
+      birthday: new Date(1957, 9, 12),
+      residence: 'Frankfurt nad Mohanem, Hessen, Západní Německo',
+      bibliography: 'Hans Florian Zimmer se narodil 12. září roku 1957 v německém Frankfurtu nad Mohanem. Během dospívání se přesunul do Londýna, kde navštěvoval školu Hurtwood House. Dle vlastních slov se mu hudba stala nejbližším přítelem po brzké smrti jeho otce. Začínal s klávesami a syntezátory, s hudbou pomáhal například synthpopové skupině The Buggles a o něco později italským new wave hudebníkům Krisma.Roku 1980 se v Londýně stal partnerem filmového skladatele Stanleyho Myerse, který dělal hudbu mj. pro Lovce Jelenů (1978). Během své spolupráce začali míchat klasický orchestrální projev s prvky elektroniky. V osmdesátých letech se podíleli na hudbě k několika filmům. Zlomovým se pro Zimmera stal rok 1988. Barry Levinson sháněl hudebního skladatele pro svůj film RAIN MAN a jeho žena mu doporučila právě Zimmera, od nějž se jí líbil soundtrack k dramatu A WORLD APART. Z Rain Mana se stal oscarový hit a nominaci získal i v hudební kategorii.Roku 1989 komponoval hudbu k dalšímu oscarovému vítězi, ŘIDIČI SLEČNY DAISY. V témže roce ho objevil slavný Ridley Scott, pro nějž Zimmer dělal hudbu ke snímku BLACK RAIN a o dva roky později i k THELMĚ A LOUISE. Roku 1992 odjel do Afriky, aby čerpal inspiraci ve zdejší hudbě pro film THE POWER OF ONE, nastudovat potřeboval především typické africké chorály a bubny. Na základě tohoto soundtracku si ho studio Disney vybralo pro animovaný hit LVÍ KRÁL (1994), který se stal mezníkem v Zimmerově kariéře. Kromě zlatého glóbu a ceny grammy si odnesl i Oscara. Ceny získával i muzikál na totéž téma, který těžil právě ze Zimmerova soundtracku. Do konce tisíciletí si oscarovou nominaci v sekci hudba vysloužily ještě filmy THE PREACHER\'S WIFE (1996), AS GOOD AS IT GETS (1997) a THIN RED LINE (1998), vše samozřejmě pod Zimmerovo taktovkou, jednu další nominaci sdílel se Stephenem Schwartzem za animovaného PRINCE EGYPTSKÉHO (1998). Velice populární je jeho na Oscara opět nominovaná hudba ke GLADIÁTOROVI (2000), která se stala jedním z nejlépe prodávaných soundtracků vůbec. Hans se zde opět spojil s Ridleym Scottem, s nímž pak spolupracoval ještě v BLACK HAWK DOWN (2001). Od té doby skládal hudbu k mnoha úspěšným filmům, mezi něž patří mj. Nolanův TEMNÝ RYTÍŘ, druhý a třetí díl PIRÁTŮ Z KARIBIKU nebo POSLEDNÍ SAMURAJ. Věrný stále zůstává i animovaným filmům.Charakteristickým by se na jeho práci dalo označit používání hudebních prvků z kultur, v nichž se odehrává příběh filmu. Velmi zručně také míchá syntezátory s orchestrální hudbou.Hans Zimmer žije v Los Angeles se svou ženou Suzanne a má čtyři děti, z toho jedno z předchozího manželství.',
+      films: [],
+    }
+
     assert.deepStrictEqual(parsed, expect)
   })
 
