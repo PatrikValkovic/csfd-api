@@ -12,9 +12,10 @@ const filmParser = require('../../lib/parsers').film
 
 describe('Parsing of sites about film', function () {
 
-  it('Should parse Pirates of the Caribbean film', async function () {
+  it('Should parse Pirates of the Caribbean film', function () {
     const content = fs.readFileSync(`${__dirname}/sites/PiratesOfTheCaribbean.html`)
-    const parsed = await filmParser(content)
+    const parsed = filmParser(content)
+
     assert.deepStrictEqual(parsed, {
       id: 221904,
       title: 'Piráti z Karibiku: Na konci světa',
@@ -54,7 +55,7 @@ describe('Parsing of sites about film', function () {
         {id: 2078, name: 'Geoffrey Rush'},
         {id: 465, name: 'Jonathan Pryce'},
         {id: 12132, name: 'Bill Nighy'},
-        {id: 38, name: 'chow/">Yun-fat Chow'},
+        {id: 38, name: 'Yun-fat Chow'},
         {id: 18731, name: 'Tom Hollander'},
         {id: 157, name: 'Stellan Skarsgård'},
         {id: 33818, name: 'Mackenzie Crook'},
@@ -68,7 +69,7 @@ describe('Parsing of sites about film', function () {
         {id: 44164, name: 'Martin Klebba'},
         {id: 44881, name: 'Reggie Lee'},
         {id: 47443, name: 'Mark Hildreth'},
-        {id: 49807, name: 'kay/">Dominic Scott Kay'},
+        {id: 49807, name: 'Dominic Scott Kay'},
         {id: 49845, name: 'Marshall Manesh'},
         {id: 50288, name: 'Kevin McNally'},
         {id: 50287, name: 'David Schofield'},
@@ -92,13 +93,14 @@ describe('Parsing of sites about film', function () {
         {id: 283277, name: 'Ned Wertimer'},
         {id: 307472, name: 'Natalie Victoria'},
       ],
-      content: 'V pokračování filmu PIRÁTI Z KARIBIKU: TRUHLA MRTVÉHO MUŽE, který v roce 2006 lámal rekordy, nacházíme naše hrdiny Willa Turnera (Orlando Bloom) a Elizabeth Swannovou (Keira Knightley) v okamžiku, kdy se přidali ke kapitánu Barbossovi (Geoffrey Rush) a zoufale pátrají po kapitánu Jacku Sparrowovi (Johnny Depp), aby ho osvobodili z pasti ve skříňce Davyho Jonese, která mu zatemňuje mysl – zatímco strašidelná loď duchů Bludný Holanďan a Davy Jones, pod kontrolou Východní indické obchodní společnosti rozsévají zkázu všude po sedmi mořích.Období pirátů se blíží ke svému konci, ale dosud nebyla vyřešena konečná rozepře. Will Turner se plaví na daleký východ, aby našel magické mapy, které mu pomohou najít skříňku Davyho Jonese a zachránit svého přítele Jacka Sparrowa. Jacka zachrání, ale… Davy Jones, lord Cutler Beckett, zuřivý asijský pirát Sao Feng a starší kapitán James Norrington zformovali nepřátelské spojenectví, které ohrožuje Jacka Sparrowa, Willa Turnera, Elizabeth Swann, jejich nového přítele kapitána Barbossu a všechny piráty na světě. Aby dosáhl vítězství, musí Jack se svou posádkou plout mimo okraj mapy, do nezmapovaného teritoria sedmi moří. Na Shipwreck Island (Ostrov vraků) až na konec světa.(oficiální text distributora)\nKapitán Jack Sparrow (Johnny Depp) sa napriek temnému zakončeniu TRUHLICE MŔTVEHO MUŽA vracia a spolu s ním všetky obľúbené postavy úspešnej pirátskej trilógie Gorea Verbinského a Jerryho Bruckheimera! PIRÁTI KARIBIKU: NA KONCI SVETA sľubujú monumentálnu porciu špičkových trikov ILM, svojský zmysel pre humor, bombastickú výpravu a dej na prasknutie nabitý udalosťami a postavami. Okrem milovaného Jacka sa totiž vracia i množstvo ďalších postáv, z nich každá sleduje vlastné záujmy. V hre je odvážny kováč Will (Orlando Bloom) a jeho prekliaty otec (Stellan Skarsgård) a krásna snúbenica Elizabeth (Keira Knightleyová), ale i lovec pirátov lord Beckett (Tom Hollander) a vlastné srdce naprieč svetovými moriami hľadajúci kapitán Bludného Holanďana Davy Jones (digitálny Bill Nighy). Novou postavou sa stáva slávny ázijský pirát Sao Feng (Chow Yun-Fat) a Sparrowov prepitý otec (líder skupiny Rolling Stones Keith Richards) . Ten sa pripája na výpravu za svojim synom až na opačný koniec sveta, pričom družinu vedie vopred neodhadnuteľný, fenomenálne sa vrátiaci milovník zelených jabĺk a niekdajší kapitán Čiernej perly, Hector Barbossa (Geoffrey Rush).(tron)',
+      content: 'V pokračování filmu PIRÁTI Z KARIBIKU: TRUHLA MRTVÉHO MUŽE, který v roce 2006 lámal rekordy, nacházíme naše hrdiny Willa Turnera (Orlando Bloom) a Elizabeth Swannovou (Keira Knightley) v okamžiku, kdy se přidali ke kapitánu Barbossovi (Geoffrey Rush) a zoufale pátrají po kapitánu Jacku Sparrowovi (Johnny Depp), aby ho osvobodili z pasti ve skříňce Davyho Jonese, která mu zatemňuje mysl – zatímco strašidelná loď duchů Bludný Holanďan a Davy Jones, pod kontrolou Východní indické obchodní společnosti rozsévají zkázu všude po sedmi mořích.Období pirátů se blíží ke svému konci, ale dosud nebyla vyřešena konečná rozepře. Will Turner se plaví na daleký východ, aby našel magické mapy, které mu pomohou najít skříňku Davyho Jonese a zachránit svého přítele Jacka Sparrowa. Jacka zachrání, ale… Davy Jones, lord Cutler Beckett, zuřivý asijský pirát Sao Feng a starší kapitán James Norrington zformovali nepřátelské spojenectví, které ohrožuje Jacka Sparrowa, Willa Turnera, Elizabeth Swann, jejich nového přítele kapitána Barbossu a všechny piráty na světě. Aby dosáhl vítězství, musí Jack se svou posádkou plout mimo okraj mapy, do nezmapovaného teritoria sedmi moří. Na Shipwreck Island (Ostrov vraků) až na konec světa.(oficiální text distributora) Kapitán Jack Sparrow (Johnny Depp) sa napriek temnému zakončeniu TRUHLICE MŔTVEHO MUŽA vracia a spolu s ním všetky obľúbené postavy úspešnej pirátskej trilógie Gorea Verbinského a Jerryho Bruckheimera! PIRÁTI KARIBIKU: NA KONCI SVETA sľubujú monumentálnu porciu špičkových trikov ILM, svojský zmysel pre humor, bombastickú výpravu a dej na prasknutie nabitý udalosťami a postavami. Okrem milovaného Jacka sa totiž vracia i množstvo ďalších postáv, z nich každá sleduje vlastné záujmy. V hre je odvážny kováč Will (Orlando Bloom) a jeho prekliaty otec (Stellan Skarsgård) a krásna snúbenica Elizabeth (Keira Knightleyová), ale i lovec pirátov lord Beckett (Tom Hollander) a vlastné srdce naprieč svetovými moriami hľadajúci kapitán Bludného Holanďana Davy Jones (digitálny Bill Nighy). Novou postavou sa stáva slávny ázijský pirát Sao Feng (Chow Yun-Fat) a Sparrowov prepitý otec (líder skupiny Rolling Stones Keith Richards) . Ten sa pripája na výpravu za svojim synom až na opačný koniec sveta, pričom družinu vedie vopred neodhadnuteľný, fenomenálne sa vrátiaci milovník zelených jabĺk a niekdajší kapitán Čiernej perly, Hector Barbossa (Geoffrey Rush).(tron)',
     })
   })
 
   it('Should parse The Lord of the Rings film', async function () {
     const content = fs.readFileSync(`${__dirname}/sites/TheLordOfTheRings.html`)
     const parsed = await filmParser(content)
+
     assert.deepStrictEqual(parsed, {
       id: 4712,
       title: 'Pán prstenů: Návrat krále',
