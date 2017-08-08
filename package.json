@@ -25,8 +25,7 @@
   },
   "dependencies": {
     "cheerio": "^0.17.0",
-    "q": "^1.0.1",
-    "request-promise": "^4.2.1"
+    "got": "^7.1.0"
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
@@ -39,5 +38,6 @@
   "main": "lib/csfd.js",
   "files": [
     "lib"
-  ]
+  ],
+  "license": "MIT"
 }
