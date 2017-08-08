@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/PatrikValkovic/csfd-api.svg?branch=master)](https://travis-ci.org/PatrikValkovic/csfd-api) [![Coverage Status](https://coveralls.io/repos/github/PatrikValkovic/csfd-api/badge.svg?branch=master)](https://coveralls.io/github/PatrikValkovic/csfd-api?branch=master)
 
-ČSFD.cz API that scrap HTML.
+csfd.cz API that scrap HTML.
 
 Made by Patrik Valkovič
 
@@ -28,7 +28,7 @@ Just a few things are implement now:
 
 Searching for film: 
 
-```
+```ecmascript 6
 var csfd = require('csfd')
 const results = await csfd.search('matrix')
 
