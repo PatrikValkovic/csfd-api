@@ -17,7 +17,7 @@ npm install --save csfd-api
 
 Every method return promise
 
-## Implement
+## Implemented
 
 Just a few things are implement now:
 - Parsing of search results (only films and people)
