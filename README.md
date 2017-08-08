@@ -1,36 +1,88 @@
 # CSFD 
+
 [![Build Status](https://travis-ci.org/PatrikValkovic/csfd-api.svg?branch=master)](https://travis-ci.org/PatrikValkovic/csfd-api) [![Coverage Status](https://coveralls.io/repos/github/PatrikValkovic/csfd-api/badge.svg?branch=master)](https://coveralls.io/github/PatrikValkovic/csfd-api?branch=master)
 
-CSFD json api
+ČSFD.cz API that scrap HTML.
+
+Made by Patrik Valkovič
 
 
 ## Install
 
 ```
-npm install --save csfd
+npm install --save csfd-api
 ```
 
 ## Methods
 
-Every method accept callback as last parameter, but also return a promise
+Every method return promise
 
-### Search Movie
+## Implement
+
+Just a few things are implement now:
+- Parsing of search results (only films and people)
+- Parsing of info about film
+- Parsing of info about person
+
+## Usage
+
+Searching for film: 
 
 ```
-var csfd = require('csfd');
-csfd.searchMovie('matrix').then(function(data){
-	console.log(data);
-});
+var csfd = require('csfd')
+const results = await csfd.search('matrix')
+
+...
+results[?] === {
+    id: 9499, 
+    name: 'Matrix',
+}
+...
 ```
 
-### Search Actor
+Get info about film:
+
+```ecmascript 6
+var csfd = require('csfd')
+const film = await csfd.film(9499)
+film === {
+    id: 9499,
+    title: "Matrix",
+    titles: [
+        {language:"USA", title:"The Matrix"},
+        {language:"Slovensko",title:"Matrix"},
+    ],
+    genre:["Akční","Sci-Fi"],
+    shotPlaces:["USA"],
+    year:1999,
+    length:131,
+    score:90,
+    directors:[
+        {id:3112,name:"Lilly Wachowski"},
+        {id:3113,name:"Lana Wachowski"}],
+    "screenplay":[
+        {id:3112,name:"Lilly Wachowski"},
+        {id:3113,name:"Lana Wachowski"}
+    ],
+    music:[{id:63014,name:"Don Davis"}],
+    actors:[
+        {id:46,name:"Keanu Reeves"},
+        //...
+        ],
+    content: "Uvěříte neuvěřitelnému! ..."
+}
 
 ```
-var csfd = require('csfd');
-csfd.searchActor('Brad Pitt').then(function(data){
-	console.log(data);
-});
-```
+
+## Roadmap
+
+- Serial parsing
+- Users parsing
+- Comments parsing
+- Parsing of ranking
+
+All help and pull requests are welcome.
+
 
 ## License
 
