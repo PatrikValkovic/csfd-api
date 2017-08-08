@@ -26,7 +26,7 @@
   "dependencies": {
     "cheerio": "^0.17.0",
     "q": "^1.0.1",
-    "request": "^2.39.0"
+    "request-promise": "^4.2.1"
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
