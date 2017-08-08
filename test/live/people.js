@@ -25,7 +25,7 @@ describe('It should parse live data about people', function () {
       })
   })
 
-  it('Should parse base information about Kit Harington', function (done) {
+  it('Should parse base information about Viggo Mortensen', function (done) {
     csfd.person(166)
       .then((person) => {
         person.name.should.be.equal('Viggo Mortensen')
