@@ -33,7 +33,7 @@ var csfd = require('csfd')
 const results = await csfd.search('matrix')
 
 ...
-results[?] === {
+results.films[?] === {
     id: 9499, 
     name: 'Matrix',
 }
