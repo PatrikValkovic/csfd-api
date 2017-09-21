@@ -17,12 +17,12 @@ describe('Parsing of search sites', function () {
     const parsed = searchParser(content)
     assert.deepStrictEqual(parsed, {
       films: [
-        {'id': 308772, 'name': 'Tarantino\'s Mind'},
-        {'id': 343390, 'name': 'Brooklyn 99 - Paranoia'},
-        {'id': 322063, 'name': 'Tarantino, le disciple de Hong-Kong'},
-        {'id': 63695, 'name': 'Tarantino XX - 20 Years of Filmmaking'},
-        {'id': 102791, 'name': 'Vzjať Tarantinu'},
-        {'id': 166642, 'name': 'Quentin Tarantino\'s Star Wars'},
+        {'id': 308772, 'type': null, 'year': 2006, 'searchName': null, 'name': 'Tarantino\'s Mind'},
+        {'id': 343390, 'type': 'epizoda', 'year': 2016, 'searchName': null, 'name': 'Brooklyn 99 - Paranoia'},
+        {'id': 322063, 'type': null, 'year': 2011, 'searchName': null, 'name': 'Tarantino, le disciple de Hong-Kong'},
+        {'id': 63695, 'type': null, 'year': 2012, 'searchName': null, 'name': 'Tarantino XX - 20 Years of Filmmaking'},
+        {'id': 102791, 'type': 'TV seriál', 'year': 2006, 'searchName': 'Stealing Tarantino', 'name': 'Vzjať Tarantinu'},
+        {'id': 166642, 'type': null, 'year': 1998, 'searchName': null, 'name': 'Quentin Tarantino\'s Star Wars'},
       ],
       people: [
         {id: 2120, name: 'Quentin Tarantino'},
