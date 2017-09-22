@@ -23,27 +23,27 @@ Just a few things are implement now:
 - Parsing of search results (only films and people)
 - Parsing of info about film
 - Parsing of info about person
+- Partial parsing of serials
 
 ## Usage
 
 Searching for film: 
 
 ```ecmascript 6
-var csfd = require('csfd')
+const csfd = require('csfd')
 const results = await csfd.search('matrix')
-
-...
+//...
 results.films[?] === {
     id: 9499, 
     name: 'Matrix',
 }
-...
+//...
 ```
 
 Get info about film:
 
 ```ecmascript 6
-var csfd = require('csfd')
+const csfd = require('csfd')
 const film = await csfd.film(9499)
 film === {
     id: 9499,
@@ -69,9 +69,30 @@ film === {
         {id:46,name:"Keanu Reeves"},
         //...
         ],
-    content: "Uvěříte neuvěřitelnému! ..."
+    content: "Uvěříte neuvěřitelnému! ...",
+    poster: "http://img.csfd.cz/..."
 }
 
+```
+
+### Serials
+
+Library partially allow to parse informations about serials.  
+Library parse it standard way as film, but from version 1.1.0 output also contain information about type. These properties are null for standard films.
+
+```ecmascript 6
+const csfd = require('csfd')
+const film = await csfd.film(263138)
+film === {
+    id: 263138,
+    title: "Hra o trůny",
+    type: "TV seriál",
+    length: 3639,
+    serialLength: {
+			episodes: 67,
+			length: 60,
+    }
+}
 ```
 
 ## Roadmap
