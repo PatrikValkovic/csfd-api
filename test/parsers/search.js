@@ -6,7 +6,9 @@
 'use strict'
 
 const fs = require('fs')
-const assert = require('assert')
+const assert = require('assert');
+const chai = require('chai');
+chai.use(require('chai-subset'))
 const searchParser = require('../../lib/parsers').search
 
 
@@ -15,7 +17,7 @@ describe('Parsing of search sites', function () {
   it('Should parse Quentin Tarantino from search page', function () {
     const content = fs.readFileSync(`${__dirname}/sites/QuentinTarantinoSearch.html`)
     const parsed = searchParser(content)
-    assert.deepStrictEqual(parsed, {
+    chai.assert.containSubset(parsed, {
       films: [
         {'id': 308772, 'type': null, 'year': 2006, 'searchName': null, 'name': 'Tarantino\'s Mind'},
         {'id': 343390, 'type': 'epizoda', 'year': 2016, 'searchName': null, 'name': 'Brooklyn 99 - Paranoia'},
@@ -36,7 +38,7 @@ describe('Parsing of search sites', function () {
   it('Should parse Pirates of the Caribbean film from search page', function () {
     const content = fs.readFileSync(`${__dirname}/sites/PiratesOfTheCaribbeanSearch.html`)
     const parsed = searchParser(content)
-    assert.deepStrictEqual(parsed, {
+    chai.assert.containSubset(parsed, {
       films: [
         {id: 290818, name: 'Piráti z Karibiku: Salazarova pomsta'},
         {id: 31875, name: 'Piráti ze Silicon Valley'},
@@ -248,7 +250,7 @@ describe('Parsing of search sites', function () {
   it('Should parse Kit Harington from search page', function () {
     const content = fs.readFileSync(`${__dirname}/sites/KitHaringtonSearch.html`)
     const parsed = searchParser(content)
-    assert.deepStrictEqual(parsed, {
+    chai.assert.containSubset(parsed, {
       films: [],
       people: [
         {id: 65871, name: 'Kit Harington'},
@@ -295,5 +297,4 @@ describe('Parsing of search sites', function () {
       ],
     })
   })
-
 })
