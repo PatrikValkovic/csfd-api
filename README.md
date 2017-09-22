@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/PatrikValkovic/csfd-api.svg?branch=dev)](https://travis-ci.org/PatrikValkovic/csfd-api) [![Coverage Status](https://coveralls.io/repos/github/PatrikValkovic/csfd-api/badge.svg?branch=dev)](https://coveralls.io/github/PatrikValkovic/csfd-api?branch=dev)
 
-csfd.cz API that scrap HTML.
+csfd.cz API that scraps HTML.
 
 Made by Patrik Valkovič
 
@@ -13,21 +13,21 @@ Made by Patrik Valkovič
 npm install --save csfd-api
 ```
 
-## Methods
+## Return values
 
-Every method return promise
+Every method returns promise
 
 ## Implemented
 
-Just a few things are implement now:
-- Parsing of search results (only films and people)
-- Parsing of info about film
-- Parsing of info about person
-- Partial parsing of serials
+Just a few things are implemented for now:
+- Parsing of search results (only movies and people)
+- Parsing of movie info
+- Parsing of person info
+- Partial parsing of TV shows
 
 ## Usage
 
-Searching for film: 
+Searching for movie: 
 
 ```ecmascript 6
 const csfd = require('csfd')
@@ -40,7 +40,7 @@ results.films[?] === {
 //...
 ```
 
-Get info about film:
+Getting movie info:
 
 ```ecmascript 6
 const csfd = require('csfd')
@@ -75,10 +75,10 @@ film === {
 
 ```
 
-### Serials
+### TV shows
 
-Library partially allow to parse informations about serials.  
-Library parse it standard way as film, but from version 1.1.0 output also contain information about type. These properties are null for standard films.
+Library partially allows to parse TV shows information.  
+It is parsed same way as movie, but since version 1.1.0 output also contain information about type. These properties are null for the movies.
 
 ```ecmascript 6
 const csfd = require('csfd')
@@ -97,12 +97,12 @@ film === {
 
 ## Roadmap
 
-- Serial parsing
-- Users parsing
+- TV show parsing
+- User parsing
 - Comments parsing
-- Parsing of ranking
+- Parsing of lists
 
-All help and pull requests are welcome.
+All help and pull requests are welcomed.
 
 
 ## License
