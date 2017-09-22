@@ -6,8 +6,8 @@
 'use strict'
 
 const fs = require('fs')
-const assert = require('assert');
-const chai = require('chai');
+const assert = require('assert')
+const chai = require('chai')
 chai.use(require('chai-subset'))
 const searchParser = require('../../lib/parsers').search
 
@@ -23,7 +23,13 @@ describe('Parsing of search sites', function () {
         {'id': 343390, 'type': 'epizoda', 'year': 2016, 'searchName': null, 'name': 'Brooklyn 99 - Paranoia'},
         {'id': 322063, 'type': null, 'year': 2011, 'searchName': null, 'name': 'Tarantino, le disciple de Hong-Kong'},
         {'id': 63695, 'type': null, 'year': 2012, 'searchName': null, 'name': 'Tarantino XX - 20 Years of Filmmaking'},
-        {'id': 102791, 'type': 'TV seriál', 'year': 2006, 'searchName': 'Stealing Tarantino', 'name': 'Vzjať Tarantinu'},
+        {
+          'id': 102791,
+          'type': 'TV seriál',
+          'year': 2006,
+          'searchName': 'Stealing Tarantino',
+          'name': 'Vzjať Tarantinu',
+        },
         {'id': 166642, 'type': null, 'year': 1998, 'searchName': null, 'name': 'Quentin Tarantino\'s Star Wars'},
       ],
       people: [
@@ -294,6 +300,21 @@ describe('Parsing of search sites', function () {
         {id: 43652, name: 'Andy On'},
         {id: 105635, name: 'Jevons Au Man-Kit'},
         {id: 204035, name: 'Jeff Cheung'},
+      ],
+    })
+  })
+
+  it('Should parse single film', function () {
+    const content = fs.readFileSync(`${__dirname}/sites/PulpFiction.html`)
+    const parsed = searchParser(content)
+    chai.assert.containSubset(parsed, {
+      films: [
+        {
+          id: 8852,
+          name: 'Pulp Fiction: Historky z podsvětí',
+          type: null,
+          year: 1994,
+        },
       ],
     })
   })
