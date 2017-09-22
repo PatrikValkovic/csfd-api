@@ -28,6 +28,8 @@
     "got": "^7.1.0"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-subset": "^1.6.0",
     "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
     "mocha": "^1.21.3",
