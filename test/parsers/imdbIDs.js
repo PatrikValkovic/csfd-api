@@ -6,12 +6,11 @@
 'use strict'
 
 const fs = require('fs')
-const assert = require('assert')
 const chai = require('chai')
 chai.use(require('chai-subset'))
 const filmParser = require('../../lib/parsers').film
 
-describe('Should parse IMDB ID\'s for films', fuhnction(){
+describe('Should parse IMDB ID\'s for films', function(){
   it('Pirates of the Caribbean', function () {
     const content = fs.readFileSync(`${__dirname}/sites/PiratesOfTheCaribbean.html`)
     const parsed = filmParser(content)
