@@ -24,7 +24,7 @@ describe('Parsing of empty type for films', function () {
     })
   })
 
-  it('Tyoe of The Lord of the Rings', function () {
+  it('The of The Lord of the Rings', function () {
     const content = fs.readFileSync(`${__dirname}/sites/TheLordOfTheRings.html`)
     const parsed = filmParser(content)
 

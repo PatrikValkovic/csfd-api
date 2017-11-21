@@ -12,7 +12,7 @@ const filmParser = require('../../lib/parsers').film
 
 describe('Should parse series with correct title and type', function () {
 
-  it('Should parse Game of thrones', function () {
+  it('Should parse Game of Thrones', function () {
     const content = fs.readFileSync(`${__dirname}/sites/GameOfThronesSerial.html`)
     const parsed = filmParser(content)
     chai.assert.containSubset(parsed, {
@@ -47,6 +47,5 @@ describe('Should parse series with correct title and type', function () {
       type: 'epizoda',
     })
   })
-
 
 })
