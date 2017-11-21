@@ -57,6 +57,14 @@ describe('Correct urls of posters', function () {
     })
   })
 
+  it('Futurama series with HTTPS', function () {
+    const content = fs.readFileSync(`${__dirname}/sites/FuturamaSerialWithDirectImageLink.html`)
+    const parsed = filmParser(content)
+    chai.assert.containSubset(parsed, {
+      poster: 'https://img.csfd.cz/files/images/film/posters/158/295/158295491_04580f.jpg',
+    })
+  })
+
   it('Spongebob serial', function () {
     const content = fs.readFileSync(`${__dirname}/sites/SpongebobSerial.html`)
     const parsed = filmParser(content)
