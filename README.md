@@ -47,6 +47,7 @@ const csfd = require('csfd')
 const film = await csfd.film(9499)
 film === {
     id: 9499,
+    imdbId: 'tt0133093',
     title: "Matrix",
     titles: [
         {language:"USA", title:"The Matrix"},
@@ -85,6 +86,7 @@ const csfd = require('csfd')
 const film = await csfd.film(263138)
 film === {
     id: 263138,
+    imdbId: 'tt0944947',
     title: "Hra o trůny",
     type: "TV seriál",
     length: 3639,
