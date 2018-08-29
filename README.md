@@ -1,6 +1,6 @@
 # CSFD 
 
-[![Build Status](https://travis-ci.org/PatrikValkovic/csfd-api.svg?branch=dev)](https://travis-ci.org/PatrikValkovic/csfd-api) [![Coverage Status](https://coveralls.io/repos/github/PatrikValkovic/csfd-api/badge.svg?branch=dev)](https://coveralls.io/github/PatrikValkovic/csfd-api?branch=dev)
+[![Build Status](https://travis-ci.org/PatrikValkovic/csfd-api.svg?branch=master)](https://travis-ci.org/PatrikValkovic/csfd-api) [![Coverage Status](https://coveralls.io/repos/github/PatrikValkovic/csfd-api/badge.svg?branch=master)](https://coveralls.io/github/PatrikValkovic/csfd-api?branch=master)
 
 csfd.cz API that scraps HTML.
 
