@@ -30,7 +30,7 @@ Just a few things are implemented for now:
 Searching for movie: 
 
 ```ecmascript 6
-const csfd = require('csfd')
+const csfd = require('csfd-api')
 const results = await csfd.search('matrix')
 //...
 results.films[?] === {
@@ -43,7 +43,7 @@ results.films[?] === {
 Getting movie info:
 
 ```ecmascript 6
-const csfd = require('csfd')
+const csfd = require('csfd-api')
 const film = await csfd.film(9499)
 film === {
     id: 9499,
@@ -82,7 +82,7 @@ Library partially allows to parse TV shows information.
 It is parsed same way as movie, but since version 1.1.0 output also contain information about type. These properties are null for the movies.
 
 ```ecmascript 6
-const csfd = require('csfd')
+const csfd = require('csfd-api')
 const film = await csfd.film(263138)
 film === {
     id: 263138,
@@ -91,8 +91,8 @@ film === {
     type: "TV seriál",
     length: 3639,
     serialLength: {
-			episodes: 67,
-			length: 60,
+        episodes: 67,
+        length: 60
     }
 }
 ```
