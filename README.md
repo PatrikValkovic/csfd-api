@@ -71,9 +71,24 @@ film === {
         //...
         ],
     content: "Uvěříte neuvěřitelnému! ...",
-    poster: "http://img.csfd.cz/..."
+    poster: "http://img.csfd.cz/...",
+    related: [
+        //...
+        {
+            id: 9497,
+            name: 'Matrix Reloaded'
+        }
+        //...
+    ],
+    similar: [
+        //...
+        {
+          id: 254156,
+          name: 'Počátek'
+        },
+        //...
+    ]
 }
-
 ```
 
 ### TV shows
@@ -123,7 +138,6 @@ comments.comments === [
 
 - TV show parsing
 - User parsing
-- Parsing of lists
 
 All help and pull requests are welcomed.
 
