@@ -49,4 +49,17 @@ describe('Should parse films with multiple parts', function () {
       },
     })
   })
+
+  it('Velka dobrodruzstvi ctyrlistku', function () {
+    const content = fs.readFileSync(`${__dirname}/sites/VelkaDobrodruzstviCtyrlistku.html`)
+    const parsed = filmParser(content)
+
+    chai.assert.containSubset(parsed, {
+      length: 72,
+      serialLength: {
+        episodes: 4,
+        length: 15,
+      },
+    })
+  })
 })
