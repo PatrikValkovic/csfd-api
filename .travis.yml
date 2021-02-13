@@ -1,11 +1,17 @@
 language: node_js
 node_js:
-  - 'v8.0.0'
+  - node
+  - lts/*
+  - 15
+  - 14
+  - 13
+  - 12
+  - 11
 
 script:
-- npm run cover
+  - npm run cover
 
 after_script:
-- npm run report
-- npm run coveralls
+  - npm run report
+  - npm run coveralls
 
