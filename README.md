@@ -71,9 +71,24 @@ film === {
         //...
         ],
     content: "Uvěříte neuvěřitelnému! ...",
-    poster: "http://img.csfd.cz/..."
+    poster: "http://img.csfd.cz/...",
+    related: [
+        //...
+        {
+            id: 9497,
+            name: 'Matrix Reloaded'
+        }
+        //...
+    ],
+    similar: [
+        //...
+        {
+          id: 254156,
+          name: 'Počátek'
+        },
+        //...
+    ]
 }
-
 ```
 
 ### TV shows
@@ -97,12 +112,32 @@ film === {
 }
 ```
 
+### Comments
+
+It is possible to parse use comments as well, however as there can be thousands of comments for a movie, there quiet delay.
+
+```ecmascript 6
+const csfd = require('csfd-api')
+const comments = await csfd.comments(9499)
+comments.comments === [
+  // ...
+  {
+    author: {
+      id: 95,
+      name: 'golfista',
+    },
+    rating: 5,
+    content: 'Určitě jeden ze tří nejlepších Sci-fi...',
+    date: new Date(2003, 4, 13),
+  },
+  // ...
+]
+```
+
 ## Roadmap
 
 - TV show parsing
 - User parsing
-- Comments parsing
-- Parsing of lists
 
 All help and pull requests are welcomed.
 
