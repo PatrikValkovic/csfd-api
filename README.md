@@ -2,6 +2,12 @@
 
 [![Build Status](https://travis-ci.org/PatrikValkovic/csfd-api.svg?branch=master)](https://travis-ci.org/PatrikValkovic/csfd-api) [![Coverage Status](https://coveralls.io/repos/github/PatrikValkovic/csfd-api/badge.svg?branch=master)](https://coveralls.io/github/PatrikValkovic/csfd-api?branch=master)
 
+# DEPRECATED
+
+Use [node-csfd-api](https://www.npmjs.com/package/node-csfd-api) instead.
+
+---------
+
 csfd.cz API that scraps HTML.
 
 Made by Patrik Valkovič
